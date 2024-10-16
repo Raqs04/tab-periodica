@@ -4,71 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-
-        .tabela {
-            width: 100%;
-            text-align: center;
-        }
-
-
-        td {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            color: #ffffff;
-            font-size: 10px;
-            font-weight: bold;
-        }
-
-        .um {
-            background-color: #3b56a6;
-        }
-
-        .primeiraColuna {
-            background-color: #7b5ba7;
-        }
-
-        .segundaColuna {
-            background-color: #f27eb2;
-        }
-
-        .laranjas {
-            background-color: #f58132;
-        }
-
-        .verde {
-            background-color: #38b66b;
-        }
-
-        .azul {
-            background-color: #6bc6ef;
-        }
-
-        .penultimaLinha {
-            background-color: #ee3432;
-        }
-
-        .ultimaLinha {
-            background-color: #a62439;
-        }
-
-        .ultimaColuna {
-            background-color: #d4ba0e;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Tabela Periódica</h1>
+    <h3>TABELA PERIÓDICA</h3>
 
     <table class="tabela">
 
 
         <tr>
-            <td class="um">H <br> Hidrogênio</td>
+            <td class="um" onmouseover="hidrogenioInfo()" onmouseout="tamNormal()" id="um">
+                <p class="numAt">1</p> 
+                <p> H </p> 
+                <p> Hidrogênio</p> 
+                <p id="hidrogenio"></p>
+            </td>
             <td></td>
             <td></td>
             <td></td>
@@ -85,12 +36,27 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="ultimaColuna">He <br> Hélio</td>
+            <td class="ultimaColuna" onmouseover="helioInfo()" onmouseout="tamNormal()" id="dois"> 
+                <p class="numAt">2</p> 
+                <p>He</p>  
+                <p>Hélio</p>
+                <p id="helio"></p>
+            </td>
         </tr>
 
         <tr>
-            <td class="primeiraColuna">Li <br> Lítio</td>
-            <td class="segundaColuna">Be <br> Berílio</td>
+            <td class="primeiraColuna" onmouseover="litioInfo()" onmouseout="tamNormal()" id="tres">
+                <p class="numAt">3</p>
+                <p>Li</p>
+                <p>Lítio</p>
+                <p id="litio"></p>
+            </td>
+            <td class="segundaColuna" onmouseover="berilioInfo()" onmouseout="tamNormal()" id="quatro">
+                <p class="numAt">4</p>
+                <p>Be</p>
+                <p>Berílio</p>
+                <p id="berilio"></p>
+            </td>
             <td></td>
             <td></td>
             <td></td>
@@ -101,17 +67,57 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="verde">B <br>Boro</td>
-            <td class="verde">C <br>Carbono</td>
-            <td class="verde">N <br>Nitrogênio</td>
-            <td class="verde">O <br>Oxigênio</td>
-            <td class="verde">F <br>Flúor</td>
-            <td class="ultimaColuna">Ne <br>Neônio</td>
+            <td class="verde" onmouseover="boroInfo()" onmouseout="tamNormal()" id="cinco">
+                <p class="numAt">5</p>
+                <p>B</p> 
+                <p>Boro</p>
+                <p id="boro"></p>
+            </td>
+            <td class="verde" onmouseover="carbonoInfo()" onmouseout="tamNormal()" id="seis">
+                <p class="numAt">6</p>
+                <p>C</p> 
+                <p>Carbono</p>
+                <p id="carbono"></p>
+            </td>
+            <td class="verde" onmouseover="nitrogenioInfo()" onmouseout="tamNormal()" id="sete">
+                <p class="numAt">7</p>
+                <p>N</p>
+                <p>Nitrogênio</p>
+                <p id="nitrogenio"></p>
+            </td>
+            <td class="verde" onmouseover="oxigenioInfo()" onmouseout="tamNormal()" id="oito">
+                <p class="numAt">8</p>
+                <p>O</p>
+                <p>Oxigênio</p> 
+                <p id="oxigenio"></p>
+            </td>
+            <td class="verde" onmouseover="fluorInfo()" onmouseout="tamNormal()" id="nove">
+                <p class="numAt">9</p>
+                <p>F</p> 
+                <p>Flúor</p> 
+                <p id="fluor"></p>
+            </td>
+            <td class="ultimaColuna" onmouseover="neonioInfo()" onmouseout="tamNormal()" id="dez">
+                <p class="numAt">10</p>
+                <p>Ne</p> 
+                <p>Neônio</p>
+                <p id="neonio"></p>
+            </td>
         </tr>
 
         <tr>
-            <td class="primeiraColuna">Na <br>Sódio</td>
-            <td class="segundaColuna">Mg <br>Magnésio</td>
+            <td class="primeiraColuna"  onmouseover="sodioInfo()" onmouseout="tamNormal()" id="onze">
+                <p class="numAt">11</p>
+                <p>Na</p> 
+                <p>Sódio</p> 
+                <p id="sodio"></p>
+            </td>
+            <td class="segundaColuna" onmouseover="magnesioInfo()" onmouseout="tamNormal()" id="doze">
+                <p class="numAt">12</p>
+                <p>Mg</p>
+                <p>Magnésio</p>
+                <p id="magnesio"></p>
+            </td>
             <td></td>
             <td></td>
             <td></td>
@@ -122,96 +128,484 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="azul">Al <br>Alumínio</td>
-            <td class="verde">Si <br>Silício</td>
-            <td class="verde">P <br>Fósforo</td>
-            <td class="verde">S <br>Enxofre</td>
-            <td class="verde">Cl <br>Cloro</td>
-            <td class="ultimaColuna">Ar <br>Argônio</td>
+            <td class="azul" onmouseover="aluminioInfo()" onmouseout="tamNormal()" id="treze">
+                <p class="numAt">13</p>
+                <p>Al</p> 
+                <p>Alumínio</p> 
+                <p id="aluminio"></p>
+            </td>
+            <td class="verde" onmouseover="silicioInfo()" onmouseout="tamNormal()" id="catorze">
+                <p class="numAt">14</p>
+                <p>Si</p> 
+                <p>Silício</p> 
+                <p id="silicio"></p>
+            </td>
+            <td class="verde" onmouseover="fosforoInfo()" onmouseout="tamNormal()" id="quinze">
+                <p class="numAt">15</p>
+                <p>P</p> 
+                <p>Fósforo</p> 
+                <p id="fosforo"></p>
+            </td>
+            <td class="verde" onmouseover="enxofreInfo()" onmouseout="tamNormal()" id="dezesseis">
+                <p class="numAt">16</p>
+                <p>S</p> 
+                <p>Enxofre</p> 
+                <p id="enxofre"></p>
+            </td>
+            <td class="verde" onmouseover="cloroInfo()" onmouseout="tamNormal()" id="dezessete">
+                <p class="numAt">17</p>
+                <p>Cl</p> 
+                <p>Cloro</p> 
+                <p id="cloro"></p>
+            </td>
+            <td class="ultimaColuna" onmouseover="argonioInfo()" onmouseout="tamNormal()" id="dezoito">
+                <p class="numAt">18</p>
+                <p>Ar</p> 
+                <p>Argônio</p> 
+                <p id="argonio"></p>
+            </td>
         </tr>
 
         <tr>
-            <td class="primeiraColuna">K <br> Potássio</td>
-            <td class="segundaColuna">Ca <br>Cálcio</td>
-            <td class="laranjas">Sc <br>Escândio</td>
-            <td class="laranjas">Ti <br>Titânio</td>
-            <td class="laranjas">V <br>Vanádio</td>
-            <td class="laranjas">Cr <br>Cromo</td>
-            <td class="laranjas">Mn <br>Manganês</td>
-            <td class="laranjas">Fe <br>Ferro</td>
-            <td class="laranjas">Co <br>Cobalto</td>
-            <td class="laranjas">Ni <br>Níquel</td>
-            <td class="laranjas">Cu <br>Cobre</td>
-            <td class="laranjas">Zn <br>Zinco</td>
-            <td class="azul">Ga <br>Gálio</td>
-            <td class="azul">Ge <br>Germânio</td>
-            <td class="verde">As <br>Arsênio</td>
-            <td class="verde">Se <br>Selênio</td>
-            <td class="verde">Br <br>Bromo</td>
-            <td class="ultimaColuna">Kr <br>Criptônio</td>
+            <td class="primeiraColuna" onmouseover="potassioInfo()" onmouseout="tamNormal()" id="dezenove">
+                <p class="numAt">19</p>
+                <p>K</p>
+                <p>Potássio</p>
+                <p id="potassio"></p>
+            </td>
+            <td class="segundaColuna"  onmouseover="calcioInfo()" onmouseout="tamNormal()" id="vinte">
+                <p class="numAt">20</p>
+                <p>Ca</p> 
+                <p>Cálcio</p> 
+                <p id="calcio"></p>
+            </td>
+            <td class="laranjas" onmouseover="escandioInfo()" onmouseout="tamNormal()" id="vinteUm">
+                <p class="numAt">21</p>
+                <p>Sc</p> 
+                <p>Escândio</p> 
+                <p id="escandio"></p>
+            </td>
+            <td class="laranjas" onmouseover="titanioInfo()" onmouseout="tamNormal()" id="vinteDois">
+                <p class="numAt">22</p>
+                <p>Ti</p> 
+                <p>Titânio</p> 
+                <p id="titanio"></p>
+            </td>
+            <td class="laranjas" onmouseover="vanadioInfo()" onmouseout="tamNormal()" id="vinteTres">
+                <p class="numAt">23</p>
+                <p>V</p> 
+                <p>Vanádio</p> 
+                <p id="vanadio"></p>
+            </td>
+            <td class="laranjas" onmouseover="cromoInfo()" onmouseout="tamNormal()" id="vinteQuatro">
+                <p class="numAt">24</p>
+                <p>Cr</p> 
+                <p>Cromo</p> 
+                <p id="cromo"></p>
+            </td>
+            <td class="laranjas" onmouseover="manganesInfo()" onmouseout="tamNormal()" id="vinteCinco">
+                <p class="numAt">25</p>
+                <p>Mn</p> 
+                <p>Manganês</p> 
+                <p id="manganes"></p>
+            </td>
+            <td class="laranjas" onmouseover="ferroInfo()" onmouseout="tamNormal()" id="vinteSeis">
+                <p class="numAt">26</p>
+                <p>Fe</p> 
+                <p>Ferro</p>
+                <p id="ferro"></p>
+            </td>
+            <td class="laranjas" onmouseover="cobaltoInfo()" onmouseout="tamNormal()" id="vinteSete">
+                <p class="numAt">27</p>
+                <p>Co</p> 
+                <p>Cobalto</p> 
+                <p id="cobalto"></p>
+            </td>
+            <td class="laranjas" onmouseover="niquelInfo()" onmouseout="tamNormal()" id="vinteOito">
+                <p class="numAt">28</p>
+                <p>Ni</p> 
+                <p>Níquel</p> 
+                <p id="niquel"></p>
+            </td>
+            <td class="laranjas" onmouseover="cobreInfo()" onmouseout="tamNormal()" id="vinteNove">
+                <p class="numAt">29</p>
+                <p>Cu</p> 
+                <p>Cobre</p> 
+                <p id="cobre"></p>
+            </td>
+            <td class="laranjas" onmouseover="zincoInfo()" onmouseout="tamNormal()" id="trinta">
+                <p class="numAt">30</p>
+                <p>Zn</p> 
+                <p>Zinco</p> 
+                <p id="zinco"></p>
+            </td>
+            <td class="azul" onmouseover="galioInfo()" onmouseout="tamNormal()" id="trintaUm">
+                <p class="numAt">31</p>
+                <p>Ga</p>
+                <p>Gálio</p> 
+                <p id="galio"></p>
+            </td>
+            <td class="azul" onmouseover="germanioInfo()" onmouseout="tamNormal()" id="trintaDois">
+                <p class="numAt">32</p>
+                <p>Ge</p> 
+                <p>Germânio</p> 
+                <p id="germanio"></p>
+            </td>
+            <td class="verde" onmouseover="arsenioInfo()" onmouseout="tamNormal()" id="trintaTres">
+                <p class="numAt">33</p>
+                <p>As</p> 
+                <p>Arsênio</p> 
+                <p id="arsenio"></p>
+            </td>
+            <td class="verde" onmouseover="selenioInfo()" onmouseout="tamNormal()" id="trintaQuatro">
+                <p class="numAt">34</p>
+                <p>Se</p> 
+                <p>Selênio</p> 
+                <p id="selenio"></p>
+            </td>
+            <td class="verde" onmouseover="bromoInfo()" onmouseout="tamNormal()" id="trintaCinco">
+                <p class="numAt">35</p>
+                <p>Br</p> 
+                <p>Bromo</p> 
+                <p id="bromo"></p>
+            </td>
+            <td class="ultimaColuna" onmouseover="criptonioInfo()" onmouseout="tamNormal()" id="trintaSeis">
+                <p class="numAt">36</p>
+                <p>Kr</p> 
+                <p>Criptônio</p> 
+                <p id="criptonio"></p>
+            </td>
         </tr>
 
         <tr>
-            <td class="primeiraColuna">Rb <br>Rubídio</td>
-            <td class="segundaColuna">Sr <br>Estrôncio</td>
-            <td class="laranjas">Y <br>Ítrio</td>
-            <td class="laranjas">Zr <br>Zircônio</td>
-            <td class="laranjas">Nb <br>Nióbio</td>
-            <td class="laranjas">Mo <br>Molibdênio</td>
-            <td class="laranjas">Tc <br>Tecnécio</td>
-            <td class="laranjas">Ru <br>Rutênio</td>
-            <td class="laranjas">Rh <br>Ródio</td>
-            <td class="laranjas">Pd <br>Paládio</td>
-            <td class="laranjas">Ag <br>Prata</td>
-            <td class="laranjas">Cd <br>Cádmio</td>
-            <td class="azul">In <br>Índio</td>
-            <td class="azul">Sn <br>Estranho</td>
-            <td class="azul">Sb <br>Antimônio</td>
-            <td class="verde">Te <br>Telúrio</td>
-            <td class="verde">I <br>Iodo</td>
-            <td class="ultimaColuna">Xe <br>Xenônio</td>
+            <td class="primeiraColuna" onmouseover="rubidioInfo()" onmouseout="tamNormal()" id="trintaSete">
+                <p class="numAt">37</p>
+                <p>Rb</p> 
+                <p>Rubídio</p>
+                <p id="rubidio"></p>
+            </td>
+            <td class="segundaColuna" onmouseover="estroncioInfo()" onmouseout="tamNormal()" id="trintaOito">
+                <p class="numAt">38</p>
+                <p>Sr</p> 
+                <p>Estrôncio</p> 
+                <p id="estroncio"></p>
+            </td>
+            <td class="laranjas" onmouseover="itrioInfo()" onmouseout="tamNormal()" id="trintaNove">
+                <p class="numAt">39</p>
+                <p>Y</p> 
+                <p>Ítrio</p> 
+                <p id="itrio"></p>
+            </td>
+            <td class="laranjas" onmouseover="zirconioInfo()" onmouseout="tamNormal()" id="quarenta">
+                <p class="numAt">40</p>
+                <p>Zr</p> 
+                <p>Zircônio</p> 
+                <p id="zirconio"></p>
+            </td>
+            <td class="laranjas" onmouseover="niobioInfo()" onmouseout="tamNormal()" id="quarentaUm">
+                <p class="numAt">41</p>
+                <p>Nb</p> 
+                <p>Nióbio</p> 
+                <p id="niobio"></p>
+            </td>
+            <td class="laranjas" onmouseover="molibdenioInfo()" onmouseout="tamNormal()" id="quarentaDois">
+                <p class="numAt">42</p>
+                <p>Mo</p> 
+                <p>Molibdênio</p> 
+                <p id="molibdenio"></p>
+            </td>
+            <td class="laranjas" onmouseover="tecnecioInfo()" onmouseout="tamNormal()" id="quarentaTres">
+                <p class="numAt">43</p>
+                <p>Tc</p> 
+                <p>Tecnécio</p> 
+                <p id="tecnecio"></p>
+            </td>
+            <td class="laranjas" onmouseover="rutenioInfo()" onmouseout="tamNormal()" id="quarentaQuatro">
+                <p class="numAt">44</p>
+                <p>Ru</p> 
+                <p>Rutênio</p> 
+                <p id="rutenio"></p>
+            </td>
+            <td class="laranjas" onmouseover="rodioInfo()" onmouseout="tamNormal()" id="quarentaCinco">
+                <p class="numAt">45</p>
+                <p>Rh</p> 
+                <p>Ródio</p> 
+                <p id="rodio"></p>
+            </td>
+            <td class="laranjas" onmouseover="paladioInfo()" onmouseout="tamNormal()" id="quarentaSeis">
+                <p class="numAt">46</p>
+                <p>Pd</p> 
+                <p>Paládio</p> 
+                <p id="paladio"></p>
+            </td>
+            <td class="laranjas" onmouseover="prataInfo()" onmouseout="tamNormal()" id="quarentaSete">
+                <p class="numAt">47</p>
+                <p>Ag</p> 
+                <p>Prata</p> 
+                <p id="prata"></p>
+            </td>
+            <td class="laranjas" onmouseover="cadmioInfo()" onmouseout="tamNormal()" id="quarentaOito">
+                <p class="numAt">48</p>
+                <p>Cd</p> 
+                <p>Cádmio</p> 
+                <p id="cadmio"></p>
+            </td>
+            <td class="azul" onmouseover="indioInfo()" onmouseout="tamNormal()" id="quarentaNove">
+                <p class="numAt">49</p>
+                <p>In</p> 
+                <p>Índio</p> 
+                <p id="indio"></p>
+            </td>
+            <td class="azul" onmouseover="estranhoInfo()" onmouseout="tamNormal()" id="cinquenta">
+                <p class="numAt">50</p>
+                <p>Sn</p> 
+                <p>Estranho</p> 
+                <p id="estranho"></p>
+            </td>
+            <td class="azul" onmouseover="antimonioInfo()" onmouseout="tamNormal()" id="cinquentaUm">
+                <p class="numAt">51</p>
+                <p>Sb</p> 
+                <p>Antimônio</p> 
+                <p id="antimonio"></p>
+            </td>
+            <td class="verde" onmouseover="telurioInfo()" onmouseout="tamNormal()" id="cinquentaDois">
+                <p class="numAt">52</p>
+                <p>Te</p> 
+                <p>Telúrio</p> 
+                <p id="telurio"></p>
+            </td>
+            <td class="verde" onmouseover="iodoInfo()" onmouseout="tamNormal()" id="cinquentaTres">
+                <p class="numAt">53</p>
+                <p>I</p> 
+                <p>Iodo</p> 
+                <p id="iodo"></p>
+            </td>
+            <td class="ultimaColuna" onmouseover="xenonioInfo()" onmouseout="tamNormal()" id="cinquentaQuatro">
+                <p class="numAt">54</p>
+                <p>Xe</p> 
+                <p>Xenônio</p> 
+                <p id="xenonio"></p>
+            </td>
         </tr>
 
         <tr>
-            <td class="primeiraColuna">Cs <br>Césio</td>
-            <td class="segundaColuna">Ba <br>Bário</td>
-            <td class="penultimaLinha">La - Lu <br> * </td>
-            <td class="laranjas">Hf <br>Háfnio</td>
-            <td class="laranjas">Ta <br>Tântalo</td>
-            <td class="laranjas">W <br>Tungstênio</td>
-            <td class="laranjas">Re <br>Rênio</td>
-            <td class="laranjas">Os <br>Ósmio</td>
-            <td class="laranjas">Ir <br>Irídio</td>
-            <td class="laranjas">Pt <br>Platina</td>
-            <td class="laranjas">Au <br> Ouro</td>
-            <td class="laranjas">Hg <br>Mercúrio</td>
-            <td class="azul">Tl <br>Tálio</td>
-            <td class="azul">Pb <br>Chumbo</td>
-            <td class="azul">Bi <br>Bismuto</td>
-            <td class="azul">Po <br>Polônio</td>
-            <td class="verde">At <br>Ástato</td>
-            <td class="ultimaColuna">Rn <br>Radônio</td>
+            <td class="primeiraColuna" onmouseover="cesioInfo()" onmouseout="tamNormal()" id="cinquentaCinco">
+                <p class="numAt">55</p>
+                <p>Cs</p> 
+                <p>Césio</p> 
+                <p id="cesio"></p>
+            </td>
+            <td class="segundaColuna" onmouseover="barioInfo()" onmouseout="tamNormal()" id="cinquentaSeis">
+                <p class="numAt">56</p>
+                <p>Ba</p> 
+                <p>Bário</p> 
+                <p id="bario"></p>
+            </td>
+            <td class="penultimaLinha">
+                <p class="numAt">57-71</p>
+                <p>La - Lu</p> 
+                <p>*</p> 
+            </td>
+            <td class="laranjas" onmouseover="hafnioInfo()" onmouseout="tamNormal()" id="setentaDois">
+                <p class="numAt">72</p>
+                <p>Hf</p> 
+                <p>Háfnio</p> 
+                <p id="hafnio"></p>
+            </td>
+            <td class="laranjas" onmouseover="tantaloInfo()" onmouseout="tamNormal()" id="setentaTres">
+                <p class="numAt">73</p>
+                <p>Ta</p> 
+                <p>Tântalo</p> 
+                <p id="tantalo"></p>
+            </td>
+            <td class="laranjas" onmouseover="tungstenioInfo()" onmouseout="tamNormal()" id="setentaQuatro">
+                <p class="numAt">74</p>
+                <p>W</p> 
+                <p>Tungstênio</p> 
+                <p id="tungstenio"></p>
+            </td>
+            <td class="laranjas" onmouseover="renioInfo()" onmouseout="tamNormal()" id="setentaCinco">
+                <p class="numAt">75</p>
+                <p>Re</p> 
+                <p>Rênio</p> 
+                <p id="renio"></p>
+            </td>
+            <td class="laranjas" onmouseover="osmioInfo()" onmouseout="tamNormal()" id="setentaSeis">
+                <p class="numAt">76</p>
+                <p>Os</p> 
+                <p>Ósmio</p> 
+                <p id="osmio"></p>
+            </td>
+            <td class="laranjas" onmouseover="iridioInfo()" onmouseout="tamNormal()" id="setentaSete">
+                <p class="numAt">77</p>
+                <p>Ir</p> 
+                <p>Irídio</p> 
+                <p id="iridio"></p>
+            </td>
+            <td class="laranjas" onmouseover="platinaInfo()" onmouseout="tamNormal()" id="setentaOito">
+                <p class="numAt">78</p>
+                <p>Pt</p> 
+                <p>Platina</p> 
+                <p id="platina"></p>
+            </td>
+            <td class="laranjas" onmouseover="ouroInfo()" onmouseout="tamNormal()" id="setentaNove">
+                <p class="numAt">79</p>
+                <p>Au</p> 
+                <p>Ouro</p> 
+                <p id="ouro"></p>
+            </td>
+            <td class="laranjas" onmouseover="mercurioInfo()" onmouseout="tamNormal()" id="oitenta">
+                <p class="numAt">80</p>
+                <p>Hg</p> 
+                <p>Mercúrio</p> 
+                <p id="mercurio"></p>
+            </td>
+            <td class="azul" onmouseover="talioInfo()" onmouseout="tamNormal()" id="oitentaUm">
+                <p class="numAt">81</p>
+                <p>Tl</p> 
+                <p>Tálio</p> 
+                <p id="talio"></p>
+            </td>
+            <td class="azul" onmouseover="chumboInfo()" onmouseout="tamNormal()" id="oitentaDois">
+                <p class="numAt">82</p>
+                <p>Pb</p> 
+                <p>Chumbo</p> 
+                <p id="chumbo"></p>
+            </td>
+            <td class="azul" onmouseover="bismutoInfo()" onmouseout="tamNormal()" id="oitentaTres">
+                <p class="numAt">83</p>
+                <p>Bi</p> 
+                <p>Bismuto</p> 
+                <p id="bismuto"></p>
+            </td>
+            <td class="azul" onmouseover="polonioInfo()" onmouseout="tamNormal()" id="oitentaQuatro">
+                <p class="numAt">84</p>
+                <p>Po</p> 
+                <p>Polônio</p> 
+                <p id="polonio"></p>
+            </td>
+            <td class="verde" onmouseover="astatoInfo()" onmouseout="tamNormal()" id="oitentaCinco">
+                <p class="numAt">85</p>
+                <p>At</p> 
+                <p>Ástato</p> 
+                <p id="astato"></p>
+            </td>
+            <td class="ultimaColuna" onmouseover="radonioInfo()" onmouseout="tamNormal()" id="oitentaSeis">
+                <p class="numAt">86</p>
+                <p>Rn</p> 
+                <p>Radônio</p> 
+                <p id="radonio"></p>
+            </td>
         </tr>
 
         <tr>
-            <td class="primeiraColuna">Fr <br>Frâncio</td>
-            <td class="segundaColuna">Ra <br>Rádio</td>
-            <td class="ultimaLinha">Ac - Lr <br>*</td>
-            <td class="laranjas">Rf <br>Rutherfórdio</td>
-            <td class="laranjas">Db <br>Dúbnio</td>
-            <td class="laranjas">Sg <br>Seabórgio</td>
-            <td class="laranjas">Bh <br>Bóhrio</td>
-            <td class="laranjas">Hs <br>Hássio</td>
-            <td class="laranjas">Mt <br>Meitnério</td>
-            <td class="laranjas">Ds <br>Darmstádio</td>
-            <td class="laranjas">Rg <br>Roentgênio</td>
-            <td class="laranjas">Cn <br>Copernício</td>
-            <td class="azul">Nh <br>Nihônio</td>
-            <td class="azul">Fl <br>Fleróvio</td>
-            <td class="azul">Mc <br>Moscóvio</td>
-            <td class="azul">Lv <br>Livermório</td>
-            <td class="verde">Ts <br>Tenesso</td>
-            <td class="ultimaColuna">Og <br>Oganessónio</td>
+            <td class="primeiraColuna" onmouseover="francioInfo()" onmouseout="tamNormal()" id="oitentaSete">
+                <p class="numAt">87</p>
+                <p>Fr</p> 
+                <p>Frâncio</p> 
+                <p id="francio"></p>
+            </td>
+            <td class="segundaColuna" onmouseover="radioInfo()" onmouseout="tamNormal()" id="oitentaOito">
+                <p class="numAt">88</p>
+                <p>Ra</p> 
+                <p>Rádio</p> 
+                <p id="radio"></p>
+            </td>
+            <td class="ultimaLinha">
+                <p class="numAt">89-103</p>
+                <p>Ac - Lr</p> 
+                <p>*</p> 
+            </td>
+            <td class="laranjas" onmouseover="rutherfordioInfo()" onmouseout="tamNormal()" id="centoQuatro">
+                <p class="numAt">104</p>
+                <p>Rf</p> 
+                <p>Rutherfórdio</p> 
+                <p id="rutherfordio"></p>
+            </td>
+            <td class="laranjas" onmouseover="dubnioInfo()" onmouseout="tamNormal()" id="centoCinco">
+                <p class="numAt">105</p>
+                <p>Db</p> 
+                <p>Dúbnio</p> 
+                <p id="dubnio"></p>
+            </td>
+            <td class="laranjas" onmouseover="seaborgioInfo()" onmouseout="tamNormal()" id="centoSeis">
+                <p class="numAt">106</p>
+                <p>Sg</p> 
+                <p>Seabórgio</p> 
+                <p id="seaborgio"></p>
+            </td>
+            <td class="laranjas" onmouseover="bohrioInfo()" onmouseout="tamNormal()" id="centoSete">
+                <p class="numAt">107</p>
+                <p>Bh</p> 
+                <p>Bóhrio</p> 
+                <p id="bohrio"></p>
+            </td>
+            <td class="laranjas" onmouseover="hassioInfo()" onmouseout="tamNormal()" id="centoOito">
+                <p class="numAt">108</p>
+                <p>Hs</p> 
+                <p>Hássio</p> 
+                <p id="hassio"></p>
+            </td>
+            <td class="laranjas" onmouseover="meitnerioInfo()" onmouseout="tamNormal()" id="centoNove">
+                <p class="numAt">109</p>
+                <p>Mt</p> 
+                <p>Meitnério</p> 
+                <p id="meitnerio"></p>
+            </td>
+            <td class="laranjas" onmouseover="darmstacioInfo()" onmouseout="tamNormal()" id="centoDez">
+                <p class="numAt">110</p>
+                <p>Ds</p> 
+                <p>Darmstácio</p> 
+                <p id="darmstacio"></p>
+            </td>
+            <td class="laranjas" onmouseover="roentgenioInfo()" onmouseout="tamNormal()" id="centoOnze">
+                <p class="numAt">111</p>
+                <p>Rg</p> 
+                <p>Roentgênio</p> 
+                <p id="roentgenio"></p>
+            </td>
+            <td class="laranjas" onmouseover="copernicioInfo()" onmouseout="tamNormal()" id="centoDoze">
+                <p class="numAt">112</p>
+                <p>Cn</p> 
+                <p>Copernício</p> 
+                <p id="copernicio"></p>
+            </td>
+            <td class="azul" onmouseover="nihonioInfo()" onmouseout="tamNormal()" id="centoTreze">
+                <p class="numAt">113</p>
+                <p>Nh</p> 
+                <p>Nihônio</p>
+                <p id="nihonio"></p>
+            </td>
+            <td class="azul" onmouseover="flerovioInfo()" onmouseout="tamNormal()" id="centoCatorze">
+                <p class="numAt">114</p>
+                <p>Fl</p> 
+                <p>Fleróvio</p> 
+                <p id="flerovio"></p>
+            </td>
+            <td class="azul" onmouseover="moscovioInfo()" onmouseout="tamNormal()" id="centoQuinze">
+                <p class="numAt">115</p>
+                <p>Mc</p> 
+                <p>Moscóvio</p> 
+                <p id="moscovio"></p>
+            </td>
+            <td class="azul" onmouseover="livermorioInfo()" onmouseout="tamNormal()" id="centoDezesseis">
+                <p class="numAt">116</p>
+                <p>Lv</p> 
+                <p>Livermório</p> 
+                <p id="livermorio"></p>
+            </td>
+            <td class="verde" onmouseover="tenessoInfo()" onmouseout="tamNormal()" id="centoDezessete">
+                <p class="numAt">117</p>
+                <p>Ts</p> 
+                <p>Tenesso</p> 
+                <p id="tenesso"></p>
+            </td>
+            <td class="ultimaColuna" onmouseover="oganessonioInfo()" onmouseout="tamNormal()" id="centoDezoito">
+                <p class="numAt">118</p>
+                <p>Og</p> 
+                <p>Oganessónio</p> 
+                <p id="oganessonio"></p>
+            </td>
         </tr>
 
         <br>
@@ -221,43 +615,196 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="penultimaLinha">La <br>Lantânio</td>
-            <td class="penultimaLinha">Ce <br>Cério</td>
-            <td class="penultimaLinha">Pr <br>Praseodímio</td>
-            <td class="penultimaLinha">Nd <br>Neodímio</td>
-            <td class="penultimaLinha">Pm <br>Promécio</td>
-            <td class="penultimaLinha">Sm <br>Samário</td>
-            <td class="penultimaLinha">Eu <br>Európio</td>
-            <td class="penultimaLinha">Gd <br>Gadolínio</td>
-            <td class="penultimaLinha">Tb <br>Térbio</td>
-            <td class="penultimaLinha">Dy <br>Disprósio</td>
-            <td class="penultimaLinha">Ho <br>Hólmio</td>
-            <td class="penultimaLinha">Er <br>Érbio</td>
-            <td class="penultimaLinha">Tm <br>Túlio</td>
-            <td class="penultimaLinha">Yb <br>Itérbio</td>
-            <td class="penultimaLinha">Lu <br>Lutécio</td>
+            <td class="penultimaLinha" onmouseover="lantanioInfo()" onmouseout="tamNormal()" id="cinquentaSete">
+                <p class="numAt">57</p>
+                <p>La</p> 
+                <p>Lantânio</p> 
+                <p id="lantanio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="cerioInfo()" onmouseout="tamNormal()" id="cinquentaOito">
+                <p class="numAt">58</p>
+                <p>Ce</p> 
+                <p>Cério</p> 
+                <p id="cerio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="praseodimioInfo()" onmouseout="tamNormal()" id="cinquentaNove">
+                <p class="numAt">59</p>
+                <p>Pr</p> 
+                <p>Praseodímio</p> 
+                <p id="praseodimio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="neodimioInfo()" onmouseout="tamNormal()" id="sessenta">
+                <p class="numAt">60</p>
+                <p>Nd</p> 
+                <p>Neodímio</p> 
+                <p id="neodimio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="promecioInfo()" onmouseout="tamNormal()" id="sessentaUm">
+                <p class="numAt">61</p>
+                <p>Pm</p> 
+                <p>Promécio</p> 
+                <p id="promecio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="samarioInfo()" onmouseout="tamNormal()" id="sessentaDois">
+                <p class="numAt">62</p>
+                <p>Sm</p> 
+                <p>Samário</p> 
+                <p id="samario"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="europioInfo()" onmouseout="tamNormal()" id="sessentaTres">
+                <p class="numAt">63</p>
+                <p>Eu</p> 
+                <p>Európio</p> 
+                <p id="europio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="gadolinioInfo()" onmouseout="tamNormal()" id="sessentaQuatro">
+                <p class="numAt">64</p>
+                <p>Gd</p> 
+                <p>Gadolínio</p> 
+                <p id="gadolinio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="terbioInfo()" onmouseout="tamNormal()" id="sessentaCinco">
+                <p class="numAt">65</p>
+                <p>Tb</p> 
+                <p>Térbio</p> 
+                <p id="terbio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="disprosioInfo()" onmouseout="tamNormal()" id="sessentaSeis">
+                <p class="numAt">66</p>
+                <p>Dy</p> 
+                <p>Disprósio</p> 
+                <p id="disprosio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="holmioInfo()" onmouseout="tamNormal()" id="sessentaSete">
+                <p class="numAt">67</p>
+                <p>Ho</p> 
+                <p>Hólmio</p> 
+                <p id="holmio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="erbioInfo()" onmouseout="tamNormal()" id="sessentaOito">
+                <p class="numAt">68</p>
+                <p>Er</p> 
+                <p>Érbio</p>
+                <p id="erbio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="tulioInfo()" onmouseout="tamNormal()" id="sessentaNove">
+                <p class="numAt">69</p>
+                <p>Tm</p> 
+                <p>Túlio</p> 
+                <p id="tulio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="iterbioInfo()" onmouseout="tamNormal()" id="setenta">
+                <p class="numAt">70</p>
+                <p>Yb</p> 
+                <p>Itérbio</p> 
+                <p id="iterbio"></p>
+            </td>
+            <td class="penultimaLinha" onmouseover="lutecioInfo()" onmouseout="tamNormal()" id="setentaUm">
+                <p class="numAt">71</p>
+                <p>Lu</p> 
+                <p>Lutécio</p> 
+                <p id="lutecio"></p>
+            </td>
         </tr>
 
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td class="ultimaLinha">Ac <br>Actínio</td>
-            <td class="ultimaLinha">Th <br>Tório</td>
-            <td class="ultimaLinha">Pa <br>Protactínio</td>
-            <td class="ultimaLinha">U <br>Urânio</td>
-            <td class="ultimaLinha">Np <br>Neptúnio</td>
-            <td class="ultimaLinha">Pu <br>Plutônio</td>
-            <td class="ultimaLinha">Am <br>Amerício</td>
-            <td class="ultimaLinha">Cm <br>Cúrio</td>
-            <td class="ultimaLinha">Bk <br>Berquélio</td>
-            <td class="ultimaLinha">Cf <br>Califórmio</td>
-            <td class="ultimaLinha">Es <br>Einstênio</td>
-            <td class="ultimaLinha">Fm <br>Férmio</td>
-            <td class="ultimaLinha">Md <br>Mendelévio</td>
-            <td class="ultimaLinha">No <br>Nobélio</td>
-            <td class="ultimaLinha">Lr <br>Laurêncio</td>
+            <td class="ultimaLinha" onmouseover="actinioInfo()" onmouseout="tamNormal()" id="oitentaNove">
+                <p class="numAt">89</p>
+                <p>Ac</p> 
+                <p>Actínio</p> 
+                <p id="actinio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="torioInfo()" onmouseout="tamNormal()" id="noventa">
+                <p class="numAt">90</p>
+                <p>Th</p> 
+                <p>Tório</p> 
+                <p id="torio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="protactinioInfo()" onmouseout="tamNormal()" id="noventaUm">
+                <p class="numAt">91</p>
+                <p>Pa</p> 
+                <p>Protactínio</p> 
+                <p id="protactinio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="uranioInfo()" onmouseout="tamNormal()" id="noventaDois">
+                <p class="numAt">92</p>
+                <p>U</p> 
+                <p>Urânio</p> 
+                <p id="uranio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="neptunioInfo()" onmouseout="tamNormal()" id="noventaTres">
+                <p class="numAt">93</p>
+                <p>Np</p> 
+                <p>Neptúnio</p> 
+                <p id="neptunio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="plutonioInfo()" onmouseout="tamNormal()" id="noventaQuatro">
+                <p class="numAt">94</p>
+                <p>Pu</p> 
+                <p>Plutônio</p> 
+                <p id="plutonio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="americioInfo()" onmouseout="tamNormal()" id="noventaCinco">
+                <p class="numAt">95</p>
+                <p>Am</p> 
+                <p>Amerício</p> 
+                <p id="americio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="curioInfo()" onmouseout="tamNormal()" id="noventaSeis">
+                <p class="numAt">96</p>
+                <p>Cm</p> 
+                <p>Cúrio</p> 
+                <p id="curio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="berquelioInfo()" onmouseout="tamNormal()" id="noventaSete">
+                <p class="numAt">97</p>
+                <p>Bk</p> 
+                <p>Berquélio</p> 
+                <p id="berquelio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="califormioInfo()" onmouseout="tamNormal()" id="noventaOito">
+                <p class="numAt">98</p>
+                <p>Cf</p> 
+                <p>Califórmio</p> 
+                <p id="califormio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="einstenioInfo()" onmouseout="tamNormal()" id="noventaNove">
+                <p class="numAt">99</p>
+                <p>Es</p> 
+                <p>Einstênio</p> 
+                <p id="einstenio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="fermioInfo()" onmouseout="tamNormal()" id="cem">
+                <p class="numAt">100</p>
+                <p>Fm</p> 
+                <p>Férmio</p> 
+                <p id="fermio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="mendelevioInfo()" onmouseout="tamNormal()" id="centoUm">
+                <p class="numAt">101</p>
+                <p>Md</p> 
+                <p>Mendelévio</p> 
+                <p id="mendelevio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="nobelioInfo()" onmouseout="tamNormal()" id="centoDois">
+                <p class="numAt">102</p>
+                <p>No</p> 
+                <p>Nobélio</p> 
+                <p id="nobelio"></p>
+            </td>
+            <td class="ultimaLinha" onmouseover="laurencioInfo()" onmouseout="tamNormal()" id="centoTres">
+                <p class="numAt">103</p>
+                <p>Lr</p> 
+                <p>Laurêncio</p> 
+                <p id="laurencio"></p>
+            </td>
         </tr>
     </table>
+
+    <footer>&#169; DESENVOLVIDO POR RAQUEL FRANCO</footer>
+    <script src="script.js"></script>
 </body>
 </html>
